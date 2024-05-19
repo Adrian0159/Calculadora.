@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+:root {
+  --background-tema1: #3a4764;
+  --background-tema2: #e6e6e6;
+  --background-tema3: #160628;
+  --background-resultado-tema1: #182034;
+  --background-resultado-tema2: #ededed;
+  --background-resultado-tema3: #1d0934;
+  --background-teclas-tema1: #232c43;
+  --background-teclas-tema2: #d1cccc;
+  --background-teclas-tema3: #1d0934;
+  --btns-tema1: #eae3dc;
+  --btns-tema2: #e5e4e1;
+  --btns-tema3: #341c4f;
+  --btns-sombra-tema1: #b4a597;
+  --btns-sombra-tema2: #a69d91;
+  --btns-sombra-tema3: #871c9c;
+  --btn-del-e-reset-tema1: #637097;
+  --btn-del-e-reset-tema2: #377f86;
+  --btn-del-e-reset-tema3: #58077d;
+  --btn-del-e-reset-sombra-tema1: #404e72;
+  --btn-del-e-reset-sombra-tema2: #1b5f65;
+  --btn-del-e-reset-sombra-tema3: #bc15f4;
+  --btn-igual-tema1: #d03f2f;
+  --btn-igual-tema2: #ca5502;
+  --btn-igual-tema3: #00e0d1;
+  --btn-igual-sombra-tema1: #93261a;
+  --btn-igual-sombra-tema2: #893901;
+  --btn-igual-sombra-tema3: #6cf9f2;
+  --text-color-tema1: #444b5a;
+  --text-color-tema2: #35352c;
+  --text-color-tema3: #ffe53d;
+  --text-color-white: #ffffff;
+}
+
+body {
+  background-color: var(--background-tema1);
+  transition: 0.5s linear;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 0 32px 4px;
+  color: var(--text-color-white);
+}
+
+.numeros {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4px;
+}
+
+.retangulo {
+  background-color: var(--background-teclas-tema1);
+  width: 80px;
+  height: 24px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.circulo {
+  background-color: var(--btn-igual-tema1);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: linear 0.5s;
+}
+
+input {
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+}
+
+label {
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.invisivel {
+  opacity: 0;
+}
+
+header h2 {
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  align-self: flex-end;
+  margin-bottom: 4px;
+}
+
+.tema {
+  display: flex;
+  justify-content: space-between;
+  width: 144px;
+}
+
+.resultado {
+  color: var(--text-color-white);
+  background-color: var(--background-resultado-tema1);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  transition: 0.5s;
+  min-height: 116px;
+  overflow: hidden;
+}
+
+.teclas {
+  display: grid;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 32px;
+  border-radius: 10px;
+  background-color: var(--background-teclas-tema1);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 56px);
+  gap: 24px;
+  transition: 0.5 linear;
+}
+
+.teclas button {
+  border-radius: 10px;
+  background-color: var(--btns-tema1);
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--text-color-tema1);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 0 0 var(--btns-sombra-tema1);
+  transition: 0.5 linear;
+}
+
+#reset {
+  grid-column: span 2;
+  background-color: var(--btn-del-e-reset-tema1);
+  color: #ffff;
+  font-size: 24px;
+  box-shadow: 0 4px 0 0 var(--btn-del-e-reset-sombra-tema1);
+}
+
+#igual {
+  grid-column: span 2;
+  background-color: var(--btn-igual-tema1);
+  color: #ffff;
+  box-shadow: 0 4px 0 0 var(--btn-igual-sombra-tema1);
+}
+
+#del {
+  background-color: var(--btn-del-e-reset-tema1);
+  color: #ffff;
+  font-size: 24px;
+  box-shadow: 0 4px 0 0 var(--btn-del-e-reset-sombra-tema1);
+}
+
+@media screen and (max-width: 556px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .teclas {
+    gap: 16px;
+    padding: 16px;
+  }
+}
